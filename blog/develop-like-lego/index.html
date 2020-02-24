@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="th">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/izmir.min.css">
-    <title>บันทึกการเดินทางของความคิด ธีรภัทร เกษสกุล</title>
+    <title>พัฒนาระบบโดยคิดถึง Lego โดย ธีรภัทร เกษสกุล</title>
     <style>
         body {
             font-family: 'Athiti', sans-serif;
@@ -41,10 +40,6 @@
                     บันทึกการเดินทางของความคิด
                 </p>
             </div>
-            <div class="col-6 text-right">
-                <br>
-                <input type="text" name="search" placeholder="ค้นหา" class="form-control" id="search">
-            </div>
         </div>
     </div>
     <div class="container">
@@ -58,6 +53,11 @@
             <div class="column">
                 <br>
                 <h2>พัฒนาระบบโดยคิดถึง Lego</h2>
+                <p>
+                    <i>
+                        28 สิงหาคม 2019
+                    </i>
+                </p>
                 <p> 
                     ถ้าคุณทำงานมาหลาย Project คุณคงต้องเคยทำงานแล้วพบว่า ทำไมมีงานบางงานที่ทำซ้ำเหมือนเดิม ถึงต้องเขียน Code
                     ซ้ำไปซ้ำมาเหมือนเดิมด้วยละ ทำไม Code แบบนี้ถึงต้องถูกเขียนยาวๆแบบนี้ทุกไฟล์ เวลาจะทำอะไรแบบนี้ด้วย
@@ -99,7 +99,7 @@
                     แต่พอเรามอง Code ของเราเป็น Lego เป็นชิ้นเล็ก ชิ้นน้อย เป็นอิสระจากกัน แทนที่ Code เหล่านี้คุณก็สร้างเป็น getModel
                     ขึ้นมาแทน ส่วนในนั้นคุณก็ all(ชื่อตาราง) ลงไปแบบนี้แทน
                 </p>
-                <p style="background-color: aquamarine; border: black 1px solid; padding: 20px;">
+                <p style="background-color: rgb(175, 175, 175); border: black 1px solid; padding: 20px;">
                     <code>
                         select * from $table
                     </code>
@@ -127,49 +127,30 @@
                 <p>
                     <b>ขอบคุณครับ</b>
                     <br>
+                    <b>ธีรภัทร เกษสกุล</b>
+                    <br>
                     <i>Photo by Francisco Jacquier on Unsplash</i>
                 </p>
             </div>
         </div>
 
-        <div style="height: 100px;"></div>
+        <div style="height: 50px;"></div>
+        <hr>
         <div class="row">
-            <div class="col-6 text-left">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Alias iusto libero odit quos temporibus fugit similique
-                tempore ea ratione provident debitis ad ullam sed,
-                quisquam, animi illo quod molestias amet.
+            <div class="col-4 text-left">
+                ชีวิตเริ่มจากศูนย์ ก่อนจะก้าวเดินเตาะแตะ ล้มลุก คลุกคลาน ทำความเข้าใจกับมัน
+                จากนั้นต้องวางไว้ แบกไปก็ลังแต่หนัก เป็นภาระอีกซะเปล่าๆ
             </div>
-            <div class="col-6 text-right">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Alias iusto libero odit quos temporibus fugit similique
+            <div class="col-4">
+            </div>
+            <div class="col-4 text-right">
+                ธีรภัทร เกษสกุล เป็นคุณพ่อของน้องเกี้ยมอี๋ ที่ไม่รู้ว่าใครซนกว่ากัน
+                ทำงานเป็นโปรแกรมเม่า ประจำบ้าน ดูหนัง เล่นเกมส์กับลูกชาย ขายของ
+                และทำงานสกรีนหารายได้เสริมเลี้ยงเจ้าแสบ
             </div>
         </div>
         <div style="height: 50px;"></div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script>
-        $("#search").keyup(function () {
-            var filter = $(this).val();
-            $("ul li").each(function () {
-                if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                    $(this).hide();
-                } else {
-                    $(this).show()
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
