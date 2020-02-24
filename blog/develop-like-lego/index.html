@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Athiti&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/izmir.min.css">
+    <title>บันทึกการเดินทางของความคิด ธีรภัทร เกษสกุล</title>
+    <style>
+        body {
+            font-family: 'Athiti', sans-serif;
+            font-size: large;
+        }
+        li {
+            list-style: none;
+            margin-bottom: 50px;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <strong style="font-size: 3.5rem;">TEERAPUCH</strong>
+            </div>
+            <div class="col-6 text-right">
+                <br>
+                <input type="text" name="search" placeholder="ค้นหา" class="form-control" id="search">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <span style="font-size: 2.5rem;">บันทึกการเดินทางของความคิด</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <img src="../../images/lego.jpg" alt="lego"
+                class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <br>
+                <h2>พัฒนาระบบโดยคิดถึง Lego</h2>
+                <p> 
+                    ถ้าคุณทำงานมาหลาย Project คุณคงต้องเคยทำงานแล้วพบว่า ทำไมมีงานบางงานที่ทำซ้ำเหมือนเดิม ถึงต้องเขียน Code
+                    ซ้ำไปซ้ำมาเหมือนเดิมด้วยละ ทำไม Code แบบนี้ถึงต้องถูกเขียนยาวๆแบบนี้ทุกไฟล์ เวลาจะทำอะไรแบบนี้ด้วย
+                </p>
+                <p>
+                    สิ่งเหล่านี้จะเกิดขึ้นมา เวลาที่คุณพบว่า การออกแบบ Code เป็นการทำงานแบบที่ไม่มีการแคร์สิ่งที่เรียกว่า “Don’t repeat
+                    yourself” หรือเจ้า DRY หรือแปลแบบตรงๆอย่างคนอ่านภาษาอังกฤษไม่ออกอย่างผมก็ อย่าทำตัวเองซ้ำ นั้นแหละ 555
+                </p>
+                <p>
+                    มันมักจะเกิดจากความคิดแค่ว่า อ่อ...การทำสิ่งนี้ คือต้องเขียนด้วย Code แบบนี้ Copy จากไฟล์นั้นมาวาง เปลี่ยนตัวแปรซะ
+                    ปรับข้อมูลให้ตรงกับตรงนี้ แบบนี้ก็จบแล้ว เราเลยไม่ได้คิดไปเลยกว่านั้น
+                </p>
+                <p>
+                    พอเราย้อนกลับไปดู เราจึงพบว่า สิ่งที่เราเคยทำลงไป มันเป็นการทำงานซ้ำอยู่กับที่ ทำงานเดิมๆ เขียน Code
+                    เดิมๆที่ถ้าคุณทำงานมานานจะโคตรเบื่อเลย เพราะคุณจะเห็น Code ที่ยาวๆแบบนั้นเต็มไปหมด
+                </p>
+                <p>
+                    ทีนี้วันนี้ผมมีวิธีคิดมานำเสนอครับ งั้นเรามาลองคิดใหม่ ที่ระบบของเราแก้ไขยาก ที่ระบบเราพัฒนาล่าช้า ที่ระบบเราไม่ยืดหยุ่น
+                    อันที่จริงมันกก็มาจากสิ่งเหล่านี้นั้นแหละครับ
+                </p>
+                <p>
+                    เพราะเราไปมัวทำซ้ำในสิ่งที่เราไม่จำเป็นอยู่บ่อยๆ ลองคิดว่าระบบคุณก็คือ บ้านหนึ่งหลัง ที่คุณทำเป็น Model
+                    จำลองขึ้นมาจากฟองน้ำ จากไม้ จากกระดาษแข็ง ตัดเป็นแผ่นๆใหญ่มาแปะ มาต่อกัน วันหนึ่งคุณบอกว่า อยากเจาะผนังเพิ่มหน้าบ้าน
+                    อ้าว...ก็เราใช้แผ่น 1 แผ่นเป็นผนัง แล้วเจาะแล้วมันจะง่ายหรอ จะปลอดภัยหรอ ไม่กระทบส่วนอื่นๆหรอ
+                </p>
+                <p>
+                    กับลองคิดว่า บ้านของคุณเป็น Lego คุณต้องต่อแต่ละอย่างจากชิ้นเล็กๆทีละชิ้นจนได้ผนังบ้าน แล้วก็ได้หลังคา ได้เสา ได้ประตู
+                    วันหนึ่งคุณอย่างเจาะผนัง คุณก็แค่ยกส่วนที่จะเอาออกมาแกะ แล้วคุณก็จะได้หน้าต่างทันที ได้ไม่ส่งผลกับคนอื่น
+                </p>
+                <p>
+                    แต่ลองมาปรับแนวคิดครับ เปลี่ยนเป็นมอง Code ให้เป็นแค่เพียง function ทำงานเล็กๆ เป็นอิสระต่อกัน
+                    ใครจะเอาไปใช้เมื่อไหร่ก็ได้ เช่นถ้าคุณต้องการข้อมูลจากฐานข้อมูลซักตารางแบบ all เลย เช่น ข้อมูลลูกค้าดึงทุกอย่างมาหมดเลย
+                </p>
+                <p>
+                    ปรกติคุณอาจจะทำ getAll() ใน customerModel เพื่อ select * from customer ทีนี้พอบอกว่า อ่อ...อยากได้แบบนี้กับ vendor ด้วย
+                    คุณจะทำไง คุณก็อาจจะไปสร้าง getAll() ใน vendorModel แล้วเขียนเหมือนกัน เห็นไหม ได้เหมือนกันเลย ได้ซ้ำเหมือนกันเดะเลย 555
+                </p>
+                <p>
+                    แต่พอเรามอง Code ของเราเป็น Lego เป็นชิ้นเล็ก ชิ้นน้อย เป็นอิสระจากกัน แทนที่ Code เหล่านี้คุณก็สร้างเป็น getModel
+                    ขึ้นมาแทน ส่วนในนั้นคุณก็ all(ชื่อตาราง) ลงไปแบบนี้แทน
+                </p>
+                <p style="background-color: aquamarine; border: black 1px solid; padding: 20px;">
+                    <code>
+                        select * from $table
+                    </code>
+                </p>
+                <p>
+                    แบบนี้คุณเขียนครั้งเดียวตลอดชีวิต
+                </p>
+                <p>
+                    การมอง Code เป็นชิ้นเล็กชิ้นน้อย มันจะทำให้คุณทำงานได้เร็วขึ้น แก้ไขงานง่ายขึ้น ทำงานร่วมกันเป็นทีมดีขึ้น
+                    พัฒนางานใหม่ในระบบเดิมง่ายขึ้น เข้าใจ code ง่ายขึ้น clean code มากขึ้น ลดความจำเจในชีวิตอีกด้วย 555
+                </p>
+                <p>
+                    อันที่จริงแล้ว แนวคิดในการเขียน code มีหลากหลายเต็มไปหมด แต่ละอย่างก็ดีหมดนั้นแหละ แต่ผมชอบการที่เราทำงานเล็กๆ
+                    และไม่ทำงานซ้ำ เมื่อไหร่ที่รู้ว่าจะต้องเขียนแบบนี้ มากกว่า 1 ครั้ง ผมจะไปเขียนเป็น function จะเรียกว่าเป็น library หรือ
+                    helper หรืออะไรก็สุดแล้วแต่ แต่มันจะเอามาทำงานได้สะดวกมาก
+                </p>
+                <p>
+                    การเขียน code เล็กๆแบบนี้ ไม่ได้บอกว่าประสิทธิภาพของระบบจะเร็ว แต่อย่างใดนะครับ
+                    มันเกี่ยวข้องกับเรื่องของการพัฒนาเท่านั้นเอง
+                </p>
+                <p>
+                    ถ้าเห็นว่าเรื่องที่คุณเสียเวลาอ่านมาถึงบรรทัดนี้พอเป็นประโยชน์บ้าง ลองกลับไปแล้วเริ่มต้น code ของคุณใหม่ให้เล็กเป็นชิ้นๆ
+                    แล้วสามารถหยิบไปต่อกับอะไรก็เป็นรูปเป็นร่างได้เสมอดูครับ
+                </p>
+                <p>
+                    <b>ขอบคุณครับ</b>
+                    <br>
+                    <i>Photo by Francisco Jacquier on Unsplash</i>
+                </p>
+            </div>
+        </div>
+
+        <div style="height: 100px;"></div>
+        <div class="row">
+            <div class="col-6 text-left">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Alias iusto libero odit quos temporibus fugit similique
+                tempore ea ratione provident debitis ad ullam sed,
+                quisquam, animi illo quod molestias amet.
+            </div>
+            <div class="col-6 text-right">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Alias iusto libero odit quos temporibus fugit similique
+            </div>
+        </div>
+        <div style="height: 50px;"></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        $("#search").keyup(function () {
+            var filter = $(this).val();
+            $("ul li").each(function () {
+                if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                    $(this).hide();
+                } else {
+                    $(this).show()
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

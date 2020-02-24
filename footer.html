@@ -1,0 +1,27 @@
+<script>
+    $("#search").keyup(function () {
+        var filter = $(this).val();
+        $("ul li").each(function () {
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).hide();
+            } else {
+                $(this).show()
+            }
+        });
+    });
+</script>
+
+<div style="height: 100px;"></div>
+<div class="row">
+    <div class="col-6 text-left">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Alias iusto libero odit quos temporibus fugit similique
+        tempore ea ratione provident debitis ad ullam sed,
+        quisquam, animi illo quod molestias amet.
+    </div>
+    <div class="col-6 text-right">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Alias iusto libero odit quos temporibus fugit similique
+    </div>
+</div>
+<div style="height: 50px;"></div>
