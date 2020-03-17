@@ -1,0 +1,164 @@
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <img src="images/lego.jpg" alt="lego" class="img-fluid">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="row">
+                <div class="col-10">
+                    <br>
+                    <h2>WHERE IS MY PHP INI</h2>
+                    <p>
+                        <i>
+                            16 มีนาคม 2020
+                        </i>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <img src="images/avatar.png" class="img img-thumbnail float-right" alt="ธีรภัทร เกษสกุล"
+                        title="ธีรภัทร เกษสกุล" style="margin-top: 20px;">
+                </div>
+            </div>
+            <p class="mt-20">
+                สำหรับคนที่ทำงานกับภาษา PHP แล้วการทำงานที่ต้องลงลึกถึงตัว setting ติดตั้งหรือกำหนดค่าต่างๆ เจ้าไฟล์ที่มีชื่อเท่ห์ๆว่า
+                php.ini มักจะโผล่มาให้ได้ยินอยู่เป็นประจำ เสมอเลย
+            </p>
+            <p>
+                โดยปรกติแล้ว ภาษา PHP จะมีการทำงานกับองค์ประกอบต่างๆอยู่มากมายหลายส่วนเลยครับ หลังจากที่เราติดตั้งเจ้า PHP
+                ลงไปในเครื่องของเราแล้ว แม้ทุกอย่างจะพร้อมใข้งาน เพราะส่วนมาก เรามักใช้เครื่องมื่อช่วยติดตั้ง อย่างพวก XAMPP, LARAGON,
+                APPSERV พวกนั้น
+            </p>
+            <p>
+                แต่หากเมื่อไหร่ การทำงานของเรา จำเป็นต้องตั้งค่าเพิ่มเติม นอกเหนือไปจาก Default configuration ที่ทางค่ายเค้าติดตั้งมาให้
+                เราก็สามารถปรับแต่ง บรรดาค่า config หรือการทำงานร่วมกันกับ extension อื่นๆเพิ่มเติมได้ที่นี่แหละ ตัวไฟล์ มันก็เหมือนกับไฟล์ text ทั่วไป แต่ดันมีนามสกุลเป็น .ini ที่เราสามารถ เปิดขึ้นมาปรับแต่งมันได้ด้วย text editor
+                ของเราทั่วไปนี่แหละครับ
+            </p>
+            <p>
+                เช่น หากเราลง .dll ซักตัวอย่าง mssql extension เพิ่มเข้าไป เราก็ต้องมาเปิด comment ที่หน้าบรรทัดของ extension
+                นั้นๆบนไฟล์นี้เสียก่อน จากนั้นก็ค่อยไปสั่ง restart ตัว server เข่น apache อีกทีก็จะสามารถ ทำงานต่อได้ ทีนี้แล้วเจ้าไฟล์ตัวนี้อยู่ที่ไหนบน com ของเรากันนะ มีวิธีหาไม่ยาก แต่นับว่าเป็นคำถามที่มือใหม่ ถามกันเป็นประจำ
+                ผมจะบอกวิธีตรวจสอบให้ ว่าไฟล์ของคุณ มันซ่อนอยู่ที่ไหน ด้วยคำสั่ง ง่ายๆ จากการเปิด php ขึ้นมาแล้วพิมพ์ไปว่า
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    phpinfo();
+                </code>
+            </div>
+            <p>
+                หรือถ้าใครจะสั่งผ่าน commandline จากบน server ก็จัดได้จาก php --ini แบบนี้คุณก็จะเห็นว่าไฟล์ของคุณ ซ่อนอยู่ที่ไหนบนเครื่อง แล้วค่อยตามไปจัดการกับมันให้เรียบร้อย สมใจหมายซะครับ 555 
+            </p>
+            <p>
+                ส่วนอะไรบ้างที่นิยมหรือแก้ไขกันบ่อยๆอยู่เป็นนิจก็เช่น
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    display_errors
+                </code>
+            </div>
+            <p>
+                หากเกิด error ขึ้นให้แสดงภายในหน้าเว็บหรือไม่ ถ้าเป็นเครื่อง development ควร On ไว้เพื่อ debug ถ้าเป็นเครื่อง production
+                ควร Off เพื่อไม่ให้ผู้ใช้เห็น อันนี้จำเป็นมากๆ เครื่องผมเปิดตลอด ถ้าไม่เห็น error แล้วงง แก้ไขไม่ถูก
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    error_reporting
+                </code>
+            </div>
+            <p>
+                ใช้ปรับระดับ level การแสดง error ว่าจะให้แสดงมากน้อยเพียงใด หากต้องการปิด error ไม่ให้แสดงเลย ให้ใส่เป็น 0
+                ได้แต่ปรกติผมใช้แบบโชว์หมด ขอแบบว่าพอมี error ปุ๊บ เห็นกันจะๆ
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    max_execution_time
+                </code>
+            </div>
+            <p>
+                กำหนดเป็นตัวเลขที่ต้องการให้ script สามารถรันได้นานที่สุด ทั่วไปกำหนดที่ 30 วินาที ซึ่งค่อนข้างเพียงพอต่อการใช้งานทั่วไป
+                หากต้องมีการทำงานที่ใช้การประมวลผลเป็นเวลานานสามารถปรับเพิ่มขึ้นได้ แต่ไม่แนะนำให้ใส่เยอะเกินไป เพราะอาจทำให้ loop
+                infinite ก่อนความเสียหายเป็นระยะเวลานาน โดยที่เราไม่รู้ตัวได้
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    max_input_time
+                </code>
+            </div>
+            <p>
+                ใช้กำหนดเวลามากที่สุดที่อนุญาตให้ php ประมวลผลข้อมูลที่ผู้ใช้ส่งเข้ามาได้เช่นการ submit form post
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    memory_limit
+                </code>
+            </div>
+            <p>
+                กำหนดขนาดของ memory ที่อนุญาตให้ script แต่ละตัวใช้ได้ ถ้ากำหนดสูงไปอาจเกิดปัญหา memory leak ได้
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    post_max_size
+                </code>
+            </div>
+            <p>
+                ขนาดข้อมูลใหญ่ที่สุดที่อนุญาตให้ผู้ใช้ส่งเข้ามาได้ ขนาดตรงนี้รวมทั้ง file ที่ upload และข้อมูลที่ submit ผ่าน form
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    file_uploads
+                </code>
+            </div>
+            <p>
+                อนุญาตให้ upload file ขึ้น server ได้หรือไม่
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    upload_max_filesize
+                </code>
+            </div>
+            <p>
+                ขนาดไฟล์สูงสุดที่ให้ upload ได้
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    max_file_uploads
+                </code>
+            </div>
+            <p>
+                จำนวนไฟล์ที่ upload ได้พร้อมกันทั้งหมด
+            </p>
+            <div class="alert alert-secondary">
+                <code>
+                    extension
+                </code>
+            </div>
+            <p>
+                กำหนด extension ของ php ที่ต้องการใช้งาน ต่อไปนี้ อย่าไปกังวล กับไฟล์นี้นะ ใครมีเวลาอย่าไปกลัว copy ตัวจริงเก็บไว้ ก่อน แล้วจากนั้นก็ปรับค่าเล่น
+                จนเข้าใจทั้งไฟล์ได้เลย
+            </p>
+            
+            
+            <div class="row">
+                <div class="col-6">
+                    <p>
+                        <b>ขอบคุณครับ</b>
+                        <br>
+                        <b>ธีรภัทร เกษสกุล</b>
+                        <br>
+                        <i>Photo by Francisco Jacquier on Unsplash</i>
+                    </p>
+                </div>
+                <div class="col-6">
+                    <div class="refresh btn btn-dark float-right">
+                        กลับหน้าแรก
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".refresh").click(function () {
+        location.reload();
+    });
+</script>

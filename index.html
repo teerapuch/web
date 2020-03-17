@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/izmir.min.css">
+    <link rel="stylesheet" href="js/paginate/PagingStyle.css">
     <title>บันทึกการเดินทางของความคิด ธีรภัทร เกษสกุล</title>
     <style>
         body {
@@ -33,7 +34,9 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <strong style="font-size: 3.5rem;">TEERAPUCH</strong>
+                <strong class="refresh" style="font-size: 3.5rem; cursor: pointer;">
+                    TEERAPUCH
+                </strong>
                 <p style="font-size: 2rem; margin-top: -20px;">
                     บันทึกการเดินทางของความคิด
                 </p>
@@ -47,8 +50,29 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="column">
-                <ul>
+            <div class="column" id="listblog">
+                <ul id="listPage">
+                    <li>
+                        <figure class="center c4-izmir c4-border-ccc-3">
+                            <img src="images/12022020.jpg" alt="WHERE IS MY PHP INI">
+                            <figcaption>
+                                WHERE IS MY PHP INI
+                            </figcaption>
+                        </figure>
+                        <a href="#" id="php-ini">
+                            <h3 class="mt-20">
+                                เรื่อง :: WHERE IS MY PHP INI
+                            </h3>
+                        </a>
+                        <div class="clearfix">
+                            <div class="float-left">
+                                วันที่ 16 มีนาคม 2563
+                            </div>
+                            <div class="float-right">
+                                Tag :: โปรแกรมมิ่ง
+                            </div>
+                        </div>
+                    </li>
                     <li>
                         <figure class="center c4-izmir c4-border-ccc-3">
                             <img src="images/12022020.jpg" alt="บันทึกการเดินทาง">
@@ -100,7 +124,7 @@
                                 พัฒนาระบบโดยคิดถึง Lego
                             </figcaption>
                         </figure>
-                        <a href="blog/develop-like-lego/index.html">
+                        <a href="#" id="develop-like-lego">
                             <h3 class="mt-20">
                                 เรื่อง :: พัฒนาระบบโดยคิดถึง Lego
                             </h3>
@@ -122,7 +146,7 @@
                                 อาการเข้าไม่ถึง
                             </figcaption>
                         </figure>
-                        <a href="blog/อาการเข้าไม่ถึง/index.html">
+                        <a href="#" id="inaccessibility">
                             <h3 class="mt-20">
                                 เรื่อง :: อาการเข้าไม่ถึง
                             </h3>
@@ -138,18 +162,21 @@
                     </li>
                 </ul>
             </div>
+            <div class="column" id="readblog">
+
+            </div>
         </div>
 
         <div style="height: 50px;"></div>
         <hr>
         <div class="row">
-            <div class="col-4 text-left">
+            <div class="col-5 text-left">
                 ชีวิตเริ่มจากศูนย์ ก่อนจะก้าวเดินเตาะแตะ ล้มลุก คลุกคลาน ทำความเข้าใจกับมัน
                 จากนั้นต้องวางไว้ แบกไปก็ลังแต่หนัก เป็นภาระอีกซะเปล่าๆ
             </div>
-            <div class="col-4">
+            <div class="col-2">
             </div>
-            <div class="col-4 text-right">
+            <div class="col-5 text-right">
                 ธีรภัทร เกษสกุล เป็นคุณพ่อของน้องเกี้ยมอี๋ ที่ไม่รู้ว่าใครซนกว่ากัน 
                 ทำงานเป็นโปรแกรมเม่า ประจำบ้าน ดูหนัง เล่นเกมส์กับลูกชาย ขายของ
                 และทำงานสกรีนหารายได้เสริมเลี้ยงเจ้าแสบ
@@ -158,8 +185,7 @@
         <div style="height: 50px;"></div>
     </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -167,7 +193,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="js/paginate/paging.js"></script>
     <script>
+        // Search
         $("#search").keyup(function () {
             var filter = $(this).val();
             $("ul li").each(function () {
@@ -177,6 +205,27 @@
                     $(this).show()
                 }
             });
+        });
+        // List page 
+        $(function () {
+            $("#listPage").JPaging({
+                pageSize: 2
+            });
+        });
+        // develop-like-lego
+        $("#develop-like-lego").click(function () {
+            $("#listblog").remove();
+            $('#readblog').load('blog/develop-like-lego/index.html');
+        });
+        // inaccessibility
+        $("#inaccessibility").click(function () {
+            $("#listblog").remove();
+            $('#readblog').load('blog/inaccessibility/index.html');
+        });
+        // php-ini
+        $("#php-ini").click(function () {
+            $("#listblog").remove();
+            $('#readblog').load('blog/php-ini/index.html');
         });
     </script>
     </body>
