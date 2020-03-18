@@ -27,21 +27,24 @@
         .mt-20 {
             margin-top: 20px;
         }
+        #listPage {
+            width: 1140px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-sm-12 col-xs-12 col-md-6">
                 <strong class="refresh" style="font-size: 3.5rem; cursor: pointer;">
                     TEERAPUCH
                 </strong>
-                <p style="font-size: 2rem; margin-top: -20px;">
+                <p style="font-size: 1.5rem; margin-top: -20px;">
                     บันทึกการเดินทางของความคิด
                 </p>
             </div>
-            <div class="col-6 text-right">
+            <div class="col-sm-12 col-xs-12 col-md-6 text-right">
                 <br>
                 <input type="text" name="search" placeholder="ค้นหา"
                 class="form-control" id="search">
@@ -216,6 +219,7 @@
         $("#develop-like-lego").click(function () {
             $("#listblog").remove();
             $('#readblog').load('blog/develop-like-lego/index.html');
+            location.href = $("blog/develop-like-lego");
         });
         // inaccessibility
         $("#inaccessibility").click(function () {
