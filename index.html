@@ -14,6 +14,7 @@
     <style>
         body {
             font-family: 'Athiti', sans-serif;
+            font-size:larger;
         }
         li {
             list-style: none;
@@ -52,6 +53,24 @@
         <div class="row">
             <div class="col-md-12" id="listblog">
                 <ul id="listPage">
+                    <li>
+                        <img src="images/priscilla-du-preez-OEdkPaxYMXU-unsplash.jpg" 
+                        alt="Project base tutorial"
+                        class="img-fluid img-thumbnail rounded mx-auto d-block">
+                        <a href="#" id="project-base-tutorial">
+                            <h3 class="mt-20">
+                                เรื่อง :: Project base tutorial
+                            </h3>
+                        </a>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                                วันที่ 12 พฤษภาคม 2562
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                                Tag :: โปรแกรมมิ่ง
+                            </div>
+                        </div>
+                    </li>
                     <li>
                         <img src="images/anthony-martino-6AtQNsjMoJo-unsplash.jpg" 
                         alt="WHERE IS MY PHP INI"
@@ -152,15 +171,43 @@
         <div style="height: 50px;"></div>
         <hr>
         <div class="row">
-            <div class="col-md-5 col-sm-6 col-xs-12 text-left">
+            <div class="col-md-5 col-sm-5 col-xs-10 text-left">
                 ธีรภัทร เกษสกุล เป็นคุณพ่อของน้องเกี้ยมอี๋ ที่ไม่รู้ว่าใครซนกว่ากัน
                 ทำงานเป็นโปรแกรมเม่า ประจำบ้าน ดูหนัง เล่นเกมส์กับลูกชาย ขายหมูสะเต๊ะ
                 และทำงานสกรีนหารายได้เสริมเลี้ยงเจ้าแสบ
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-2 col-xs-2">
             </div>
-            <div class="col-md-5 col-sm-6 col-xs-12 text-right">
-                Design And Develop By @teerapuch 2020
+            <div class="col-md-5 col-sm-5 col-xs-10 text-right">
+                <p>
+                    Design And Develop By @teerapuch 2020
+                </p>
+                <ul class="list-inline" style="font-size: xx-large;">
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/teerapuch/" 
+                        target="blank" title="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/teerapuch/"
+                        target="blank" title="facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.twitter.com/teerapuch/" 
+                        target="blank" title="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.youtube.com/teerapuchchanel/" 
+                        target="blank" title="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div style="height: 50px;"></div>
@@ -176,6 +223,9 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="js/paginate/paging.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1e489c12f5.js" crossorigin="anonymous">
+    </script>
     <script>
         // Search
         $("#search").keyup(function () {
@@ -194,20 +244,28 @@
                 pageSize: 3
             });
         });
+        // project-base-tutorial
+        $("#project-base-tutorial").click(function () {
+            $("#listblog").remove();
+            $("#search").remove();
+            $('#readblog').load('blog/project-base-tutorial/index.html');
+        });
         // develop-like-lego
         $("#develop-like-lego").click(function () {
             $("#listblog").remove();
+            $("#search").remove();
             $('#readblog').load('blog/develop-like-lego/index.html');
-            location.href = $("blog/develop-like-lego");
         });
         // inaccessibility
         $("#inaccessibility").click(function () {
             $("#listblog").remove();
+            $("#search").remove();
             $('#readblog').load('blog/inaccessibility/index.html');
         });
         // php-ini
         $("#php-ini").click(function () {
             $("#listblog").remove();
+            $("#search").remove();
             $('#readblog').load('blog/php-ini/index.html');
         });
     </script>
