@@ -52,7 +52,7 @@
         </div>
         <div class="row">
             <div class="col-md-12" id="listblog">
-                <ul id="listPage">
+                <ul id="listPage" class="reversed">
                     <li>
                         <img src="images/priscilla-du-preez-OEdkPaxYMXU-unsplash.jpg" 
                         alt="Project base tutorial"
@@ -161,6 +161,24 @@
                             </div>
                         </div>
                     </li>
+                    <li>
+                        <img src="images/first-app.jpg" 
+                        alt="first-app"
+                        class="img-fluid img-thumbnail rounded mx-auto d-block">
+                        <a href="#" id="first-react-native-app">
+                            <h3 class="mt-20">
+                                เรื่อง :: การพัฒนา Application ด้วยระบบ React Native ครั้งแรก
+                            </h3>
+                        </a>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                                วันที่ 27 มกราคม 2564
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                                Tag :: โปรแกรมมิ่ง
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="column" id="readblog">
@@ -182,7 +200,7 @@
                 <p>
                     Design And Develop By @teerapuch 2020
                 </p>
-                <ul class="list-inline" style="font-size: xx-large;">
+                <ul id="list-post" class="list-inline" style="font-size: xx-large;">
                     <li class="list-inline-item">
                         <a href="https://www.instagram.com/teerapuch/" 
                         target="blank" title="instagram">
@@ -227,6 +245,9 @@
     <script src="https://kit.fontawesome.com/1e489c12f5.js" crossorigin="anonymous">
     </script>
     <script>
+        // Reversed
+        function reverse_lists() { var olists = document.getElementsByTagName('ol'); for (var i = 0; i < olists.length; i++) { if (!olists[i].className.match(/\breversed\b/)) continue; var items = olists[i].getElementsByTagName('li'); for(var j = 0; j < items.length; j++) { items[j].setAttribute("value", items.length - j); } } }
+
         // Search
         $("#search").keyup(function () {
             var filter = $(this).val();
@@ -238,10 +259,11 @@
                 }
             });
         });
+        reverse_lists();
         // List page 
         $(function () {
             $("#listPage").JPaging({
-                pageSize: 3,
+                pageSize: 4,
             });
         });
         // project-base-tutorial
@@ -267,6 +289,13 @@
             $("#listblog").remove();
             $("#search").remove();
             $('#readblog').load('blog/php-ini/index.html');
+        });
+        // first-react-native-app
+        $("#first-react-native-app").click(function () {
+            $("#listblog").remove();
+            $("#php-ini").remove();
+            $("#search").remove();
+            $('#readblog').load('blog/first-react-native-app/index.html');
         });
     </script>
     </body>
